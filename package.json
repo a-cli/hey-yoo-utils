@@ -1,6 +1,6 @@
 {
   "name": "wu-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "some common utils for wu-node packages",
   "main": "index.js",
   "scripts": {
