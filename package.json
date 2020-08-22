@@ -1,0 +1,26 @@
+{
+  "name": "wu-utils",
+  "version": "0.0.1",
+  "description": "some common utils for wu-node packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wu-node/wu-utils.git"
+  },
+  "keywords": [
+    "wu-utils",
+    "wu-node"
+  ],
+  "author": "Haolin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wu-node/wu-utils/issues"
+  },
+  "homepage": "https://github.com/wu-node/wu-utils#readme",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
+}
