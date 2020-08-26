@@ -9,7 +9,11 @@ function batchRegCommand(program, list) {
 		const keys = Object.keys(cfg);
 		let tempOne = program;
 		keys.forEach((key) => {
-			tempOne = tempOne[key](cfg[key]);
+			if (Array.isArray(cfg[key])) {
+				tempOne = tempOne[key](...cfg[key]);
+			} else {
+				tempOne = tempOne[key](cfg[key]);
+			}
 		});
 		if (!cfg.action && moduleSource) {
 			let tempModule = require(moduleSource);
