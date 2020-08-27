@@ -1,3 +1,11 @@
+function runProgramMethod(program, key, args) {
+	if (Array.isArray(args)) {
+		return program[key](...args);
+	} else {
+		return program[key](args);
+	}
+}
+
 /**
  * @param {Object} program (Command object's instance. Create by commander package)
  * @param {Array} list (command config list)
@@ -7,12 +15,14 @@ function batchRegCommand(program, list) {
 		let moduleSource = cfg.source || null;
 		delete cfg.source;
 		const keys = Object.keys(cfg);
-		let tempOne = program;
+		let _program = program;
 		keys.forEach((key) => {
-			if (Array.isArray(cfg[key])) {
-				tempOne = tempOne[key](...cfg[key]);
+			if (key === 'options' && Array.isArray(cfg[key])) {
+				cfg[key].forEach((opt) => {
+					_program = runProgramMethod(_program, 'option', opt);
+				});
 			} else {
-				tempOne = tempOne[key](cfg[key]);
+				_program = runProgramMethod(_program, key, cfg[key]);
 			}
 		});
 		if (!cfg.action && moduleSource) {
