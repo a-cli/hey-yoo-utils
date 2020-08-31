@@ -11,6 +11,7 @@ const info = 'info';
 const success = 'success';
 const warn = 'warn';
 const error = 'error';
+const print = 'print';
 
 const blackColor = chalk.rgb(0, 0 , 0);
 
@@ -58,11 +59,16 @@ const typeCfg = {
 		label: ' ERROR ',
 		defaultColor: red,
 	},
+	[print]: {
+		label: null,
+		defaultColor: white,
+	},
 };
 
 module.exports = {
 	colors: [white, blue, green, yellow, red],
-	types: [log, info, success, warn, error],
+	types: [log, info, success, warn, error, print],
 	colorCfg,
 	typeCfg,
+	print,
 };

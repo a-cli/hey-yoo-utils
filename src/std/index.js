@@ -3,6 +3,7 @@ const {
 	types,
 	colorCfg,
 	typeCfg,
+	print,
 } = require('./config');
 
 function adapter(msg) {
@@ -57,17 +58,27 @@ const std = new Proxy(function () {}, {
 			return;
 		}
 
-		const [ msg, ...rest ] = argArray;
+		let [ msg, ...rest ] = argArray;
 
 		if (type) {
 			if (!color) {
 				color = typeCfg[type].defaultColor;
 			}
-			return console.log(
+
+			let arg = [
 				colorCfg[color].label(typeCfg[type].label),
 				colorCfg[color].content(adapter(msg).trim()),
-				...rest
-			);
+			];
+
+			if (type === print) {
+				[ label, msg, ...rest ] = argArray;
+				arg = [ colorCfg[color].label(label) ];
+				if (argArray.length > 1) {
+					arg.push(colorCfg[color].content(adapter(msg).trim()));
+				}
+			}
+
+			return console.log(...arg, ...rest);
 		}
 
 		if (color) {
