@@ -1,7 +1,7 @@
 {
   "name": "wu-utils",
   "version": "0.0.10",
-  "description": "some common utils for wu-node packages",
+  "description": "A JavaScript utility library for wu-node project.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
