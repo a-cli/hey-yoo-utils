@@ -39,7 +39,7 @@ const stdStorage = {
 const std = new Proxy(function () {}, {
 	get(target, p, receiver) {
 		if (types.includes(p)) {
-			stdStorage.setType(p)
+			stdStorage.setType(p);
 			return receiver;
 		}
 		if (colors.includes(p)) {
@@ -58,22 +58,23 @@ const std = new Proxy(function () {}, {
 		}
 
 		const [ msg, ...rest ] = argArray;
-		let args = [];
 
 		if (type) {
 			if (!color) {
 				color = typeCfg[type].defaultColor;
 			}
-			args = [
+			return console.log(
 				colorCfg[color].label(typeCfg[type].label),
 				colorCfg[color].content(adapter(msg).trim()),
-			];
-
-			return console.log(...args, ...rest);
+				...rest
+			);
 		}
 
 		if (color) {
-			return console.log(colorCfg[color].content(adapter(msg).trim()), ...rest);
+			return console.log(
+				colorCfg[color].content(adapter(msg).trim()),
+				...rest
+			);
 		}
 
 		return console.log(...argArray);
