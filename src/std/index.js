@@ -71,6 +71,7 @@ const std = new Proxy(function () {}, {
 			];
 
 			if (type === print) {
+				let label;
 				[ label, msg, ...rest ] = argArray;
 				arg = [ colorCfg[color].label(label) ];
 				if (argArray.length > 1) {
