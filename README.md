@@ -89,18 +89,21 @@ console.log(args);
 
 ### std
 
-The simple way to get started with std:
+simple use std:
 
 ```javascript
 const { std } = require('wu-utils');
+
 // print label and content by std types(log, info, success, warn, error)
 std.log('hello world!');
 std.info('hello world!');
 std.success('hello world!');
 std.warn('hello world!');
 std.error('hello world!');
+
 // print customize label and content by a std special type(print)
 std.print(' LABEL ', 'hello world!');
+
 // print content by std colors(white, blue, green, yellow, red)
 std.white('hello world!');
 std.blue('hello world!');
