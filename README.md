@@ -14,8 +14,8 @@ npm install wu-utils
 
 | util name | description | document |
 |----|----|----|
-| batchRegCommand | Batch registered command for package commander | [batchRegCommand](#batchRegCommand), [commander github](https://github.com/tj/commander.js#installation) |
-| chalk | Terminal string styling done right | [chalk github](https://github.com/chalk/chalk) |
+| batchRegCommand | Batch registered command for package `commander` | [batchRegCommand](#batchRegCommand), [commander(github)](https://github.com/tj/commander.js#installation) |
+| chalk | Terminal string styling done right | [chalk(github)](https://github.com/chalk/chalk) |
 | parseArgs | Parse process argv to object | [parseArgs](#parseArgs) |
 | std | Console print terminal string styling | [std](#parseArgs) |
 
