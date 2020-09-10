@@ -15,8 +15,10 @@ npm install wu-utils
 | util name | description | document |
 |----|----|----|
 | batchRegCommand | Batch registered command for package `commander` | [batchRegCommand](#batchRegCommand), [commander(github)](https://github.com/tj/commander.js#installation) |
-| chalk | Terminal string styling done right | [chalk(github)](https://github.com/chalk/chalk) |
+| chalk | Terminal string styling done right | [chalk(github)](https://github.com/chalk/chalk) [chalk.color](#chalk) |
+| fsExtra | fs extra function | [fsExtra](#fsExtra) |
 | parseArgs | Parse process argv to object | [parseArgs](#parseArgs) |
+| pathExtra | path extra function | [pathExtra](#pathExtra) |
 | std | Console print terminal string styling | [std](#parseArgs) |
 
 ### batchRegCommand
@@ -64,6 +66,44 @@ batchRegCommand(program, commands);
 program.parse(process.argv);
 ```
 
+### chalk
+
+On the basis of chalk, add a new attribute `color` to provide additional preset colors:
+
+* red
+* pink
+* purple
+* deepPurple
+* indigo
+* blue
+* lightBlue
+* cyan
+* teal
+* green
+* lightGreen
+* lime
+* yellow
+* amber
+* orange
+* deepOrange
+* brown
+* gray
+* blueGray
+
+```javascript
+chalk.color.red('hello world!');
+```
+
+### fsExtra
+
+#### fsExtra.ensureDir
+
+ensure the directory exists, it will create directory if isn't exist
+
+```javascript
+ensureDir('xxx/yyy/zzz');
+```
+
 ### parseArgs
 
 Parse process argv to object:
@@ -74,17 +114,31 @@ const { parseArgs } = require('wu-utils');
 const args = parseArgs(['debug', 'text=string', 'num=123', 'visible=true', 'disabled=false', 'val=null', 'id=undefined']);
 
 console.log(args);
-/**
-* {
-*   debug: true,
-*   test: 'string',
-*   num: '123',
-*   visible: true,
-*   disabled: false,
-*   val: null,
-*   id: undefiend,
-* }
+/*
+{
+  debug: true,
+  test: 'string',
+  num: '123',
+  visible: true,
+  disabled: false,
+  val: null,
+  id: undefiend,
+}
 */
+```
+
+### pathExtra
+
+#### fsExtra.removeExtname
+
+remove the path extname if it had
+
+```javascript
+removeExtname('index.js');
+// return index
+
+removeExtname('xxx/yyy/index.js');
+// return xxx/yyy/index
 ```
 
 ### std
