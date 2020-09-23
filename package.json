@@ -1,11 +1,8 @@
 {
   "name": "wu-utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A JavaScript utility library for wu-node project.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wu-node/wu-utils.git"
@@ -20,7 +17,5 @@
     "url": "https://github.com/wu-node/wu-utils/issues"
   },
   "homepage": "https://github.com/wu-node/wu-utils#readme",
-  "dependencies": {
-    "chalk": "^4.1.0"
-  }
+  "dependencies": {}
 }

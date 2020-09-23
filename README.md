@@ -15,11 +15,9 @@ npm install wu-utils
 | util name | description | document |
 |----|----|----|
 | batchRegCommand | Batch registered command for package `commander` | [batchRegCommand](#batchRegCommand), [commander(github)](https://github.com/tj/commander.js#installation) |
-| chalk | Terminal string styling done right | [chalk(github)](https://github.com/chalk/chalk) [chalk.color](#chalk) |
 | fsExtra | fs extra function | [fsExtra](#fsExtra) |
 | parseArgs | Parse process argv to object | [parseArgs](#parseArgs) |
 | pathExtra | path extra function | [pathExtra](#pathExtra) |
-| std | Console print terminal string styling | [std](#parseArgs) |
 
 ### batchRegCommand
 
@@ -64,34 +62,6 @@ program
 batchRegCommand(program, commands);
 
 program.parse(process.argv);
-```
-
-### chalk
-
-On the basis of chalk, add a new attribute `color` to provide additional preset colors:
-
-* red
-* pink
-* purple
-* deepPurple
-* indigo
-* blue
-* lightBlue
-* cyan
-* teal
-* green
-* lightGreen
-* lime
-* yellow
-* amber
-* orange
-* deepOrange
-* brown
-* gray
-* blueGray
-
-```javascript
-chalk.color.red('hello world!');
 ```
 
 ### fsExtra
@@ -139,42 +109,4 @@ removeExtname('index.js');
 
 removeExtname('xxx/yyy/index.js');
 // return xxx/yyy/index
-```
-
-### std
-
-simple use std:
-
-```javascript
-const { std } = require('wu-utils');
-
-// print label and content by std types(log, info, success, warn, error)
-std.log('hello world!');
-std.info('hello world!');
-std.success('hello world!');
-std.warn('hello world!');
-std.error('hello world!');
-
-// print customize label and content by a std special type(print)
-std.print(' LABEL ', 'hello world!');
-
-// print content by std colors(white, blue, green, yellow, red)
-std.white('hello world!');
-std.blue('hello world!');
-std.green('hello world!');
-std.yellow('hello world!');
-std.red('hello world!');
-```
-
-It can freely combine and use std like this:
-
-```javascript
-const { std } = require('wu-utils');
-
-std.red.log('hello world!');
-std.green.info('hello world!');
-std.white.success('hello world!');
-std.warn.blue('hello world!');
-std.error.yellow('hello world!');
-std.print.green(' LABEL ', 'hello world!');
 ```
