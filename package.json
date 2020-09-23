@@ -1,8 +1,11 @@
 {
   "name": "wu-utils",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A JavaScript utility library for wu-node project.",
   "main": "index.js",
+  "scripts": {
+    "build": "npx entry-builder"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wu-node/wu-utils.git"
@@ -17,5 +20,8 @@
     "url": "https://github.com/wu-node/wu-utils/issues"
   },
   "homepage": "https://github.com/wu-node/wu-utils#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "entry-builder": "^0.3.0"
+  }
 }
