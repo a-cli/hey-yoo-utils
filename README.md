@@ -1,6 +1,6 @@
 # wu-utils
 
-A JavaScript utility library for wu-node project.
+A JavaScript utility library for wu-cli project.
 
 ## Installation
 

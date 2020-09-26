@@ -1,25 +1,24 @@
 {
   "name": "wu-utils",
   "version": "0.2.3",
-  "description": "A JavaScript utility library for wu-node project.",
+  "description": "A JavaScript utility library for wu-cli project.",
   "main": "index.js",
   "scripts": {
     "build": "npx entry-builder"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wu-node/wu-utils.git"
+    "url": "git+https://github.com/wu-cli/wu-utils.git"
   },
   "keywords": [
-    "wu-utils",
-    "wu-node"
+    "wu-cli"
   ],
   "author": "Haolin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wu-node/wu-utils/issues"
+    "url": "https://github.com/wu-cli/wu-utils/issues"
   },
-  "homepage": "https://github.com/wu-node/wu-utils#readme",
+  "homepage": "https://github.com/wu-cli/wu-utils#readme",
   "dependencies": {},
   "devDependencies": {
     "entry-builder": "^0.3.0"
