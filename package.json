@@ -1,6 +1,6 @@
 {
-  "name": "wu-utils",
-  "version": "0.2.3",
+  "name": "a-cli-utils",
+  "version": "0.3.0",
   "description": "A JavaScript utility library for wu-cli project.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wu-cli/wu-utils.git"
+    "url": "git+https://github.com/wu-cli/a-cli-utils.git"
   },
   "keywords": [
     "wu-cli"
@@ -16,9 +16,9 @@
   "author": "Haolin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wu-cli/wu-utils/issues"
+    "url": "https://github.com/wu-cli/a-cli-utils/issues"
   },
-  "homepage": "https://github.com/wu-cli/wu-utils#readme",
+  "homepage": "https://github.com/wu-cli/a-cli-utils#readme",
   "dependencies": {},
   "devDependencies": {
     "entry-builder": "^0.3.0"

@@ -1,11 +1,11 @@
-# wu-utils
+# a-cli-utils
 
 A JavaScript utility library for wu-cli project.
 
 ## Installation
 
 ```bash
-npm install wu-utils
+npm install a-cli-utils
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ Batch registered command by command config list:
 
 ```javascript
 const { Command } = require('commander');
-const { batchRegCommand } = require('wu-utils');
+const { batchRegCommand } = require('a-cli-utils');
 
 const commands = [
   {
@@ -79,7 +79,7 @@ ensureDir('xxx/yyy/zzz');
 Parse process argv to object:
 
 ```javascript
-const { parseArgs } = require('wu-utils');
+const { parseArgs } = require('a-cli-utils');
 
 const args = parseArgs(['debug', 'text=string', 'num=123', 'visible=true', 'disabled=false', 'val=null', 'id=undefined']);
 
