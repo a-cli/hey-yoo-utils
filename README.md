@@ -1,6 +1,6 @@
 # a-cli-utils
 
-A JavaScript utility library for wu-cli project.
+A JavaScript utility library for a-cli project.
 
 ## Installation
 

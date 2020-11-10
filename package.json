@@ -1,26 +1,27 @@
 {
   "name": "a-cli-utils",
   "version": "0.3.0",
-  "description": "A JavaScript utility library for wu-cli project.",
+  "description": "A JavaScript utility library for a-cli project.",
   "main": "index.js",
   "scripts": {
     "build": "npx entry-builder"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wu-cli/a-cli-utils.git"
+    "url": "git+https://github.com/a-cli/a-cli-utils.git"
   },
   "keywords": [
-    "wu-cli"
+    "a-cli",
+    "a-cli-utils"
   ],
   "author": "Haolin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wu-cli/a-cli-utils/issues"
+    "url": "https://github.com/a-cli/a-cli-utils/issues"
   },
-  "homepage": "https://github.com/wu-cli/a-cli-utils#readme",
+  "homepage": "https://github.com/a-cli/a-cli-utils#readme",
   "dependencies": {},
   "devDependencies": {
-    "entry-builder": "^0.3.0"
+    "entry-builder": "^0.3.1"
   }
 }
