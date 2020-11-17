@@ -22,6 +22,6 @@
   "homepage": "https://github.com/a-cli/a-cli-utils#readme",
   "dependencies": {},
   "devDependencies": {
-    "entry-builder": "^0.3.1"
+    "entry-builder": "^0.3.0"
   }
 }
