@@ -1,27 +1,20 @@
 {
-  "name": "a-cli-utils",
-  "version": "0.3.1",
-  "description": "A JavaScript utility library for a-cli project.",
-  "main": "index.js",
-  "scripts": {
-    "build": "npx entry-builder"
-  },
+  "name": "hey-yoo-utils",
+  "version": "0.1.0",
+  "description": "A JavaScript utility library.",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/a-cli/a-cli-utils.git"
+    "url": "git+https://github.com/hey-yoo/hey-yoo-utils.git"
   },
   "keywords": [
-    "a-cli",
-    "a-cli-utils"
+    "hey-yoo",
+    "hey-yoo-utils"
   ],
   "author": "Haolin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/a-cli/a-cli-utils/issues"
+    "url": "https://github.com/hey-yoo/hey-yoo-utils/issues"
   },
-  "homepage": "https://github.com/a-cli/a-cli-utils#readme",
-  "dependencies": {},
-  "devDependencies": {
-    "entry-builder": "^0.3.1"
-  }
+  "homepage": "https://github.com/hey-yoo/hey-yoo-utils#readme"
 }
