@@ -8,6 +8,4 @@ function removeExtname(argPath) {
   return argPath;
 }
 
-module.exports = {
-  removeExtname,
-};
+module.exports = removeExtname;
