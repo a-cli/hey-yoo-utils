@@ -1,10 +1,3 @@
-const needParseCfg = {
-  'true': true,
-  'false': false,
-  'undefined': undefined,
-  'null': null,
-};
-
 /**
  * @param {Array} args
  * @return {Object} result
@@ -16,9 +9,23 @@ function parseArgs(args) {
       if (/^(?!=).*=.*/.test(args[i])) {
         let temp = args[i].split('=');
         let key = temp.shift();
-        result[key] = temp.join('=');
-        if (needParseCfg.hasOwnProperty(result[key])) {
-          result[key] = needParseCfg[result[key]];
+        if (key) {
+          result[key] = temp.join('=');
+          switch (result[key]) {
+            case 'true':
+              result[key] = true;
+              break;
+            case 'false':
+              result[key] = false;
+              break;
+            case 'undefined':
+              result[key] = undefined;
+              break;
+            case 'null':
+              result[key] = null;
+              break;
+            default:
+          }
         }
       } else {
         result[args[i]] = true;
