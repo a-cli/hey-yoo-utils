@@ -1,5 +1,1 @@
-const removeExtname = require('./removeExtname');
-
-module.exports = {
-  removeExtname,
-};
+module.exports.removeExtname = require('./removeExtname');
