@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 function remove(tagPath) {
   if (fs.existsSync(tagPath)) {
     const stats = fs.statSync(tagPath);
