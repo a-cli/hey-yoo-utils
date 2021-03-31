@@ -26,9 +26,9 @@ npm install hey-yoo-utils
 Parse process argv to object:
 
 ```javascript
-const { common } = require('hey-yoo-utils');
+const { parseArgs } = require('hey-yoo-utils/common');
 
-const args = common.parseArgs(['debug', 'text=string', 'num=123', 'visible=true', 'disabled=false', 'val=null', 'id=undefined']);
+const args = parseArgs(['debug', 'text=string', 'num=123', 'visible=true', 'disabled=false', 'val=null', 'id=undefined']);
 
 console.log(args);
 /*
@@ -49,12 +49,12 @@ console.log(args);
 Run the function and pass parameters to it.
 
 ```javascript
-const { common } = require('hey-yoo-utils');
+const { runFunc } = require('hey-yoo-utils/common');
 
-common.runFunc(() => {}, 'params1', 'params2');
+runFunc(() => {}, 'params1', 'params2');
 
 // This is not running.
-common.runFunc(undefined, 'params1', 'params2');
+runFunc(undefined, 'params1', 'params2');
 ```
 
 ### typeOf
@@ -62,9 +62,9 @@ common.runFunc(undefined, 'params1', 'params2');
 Get object type.
 
 ```javascript
-const { common } = require('hey-yoo-utils');
+const { typeOf } = require('hey-yoo-utils/common');
 
-common.typeOf('foo bar');
+typeOf('foo bar');
 // return 'string
 ```
 
@@ -73,9 +73,9 @@ common.typeOf('foo bar');
 Ensure the directory exists, it will create directory if isn't exist.
 
 ```javascript
-const { fsExtra } = require('hey-yoo-utils');
+const { ensureDir } = require('hey-yoo-utils/fsExtra');
 
-fsExtra.ensureDir('xxx/yyy/zzz');
+ensureDir('xxx/yyy/zzz');
 ```
 
 ### remove
@@ -83,9 +83,9 @@ fsExtra.ensureDir('xxx/yyy/zzz');
 Delete directory or file.
 
 ```javascript
-const { fsExtra } = require('hey-yoo-utils');
+const { remove } = require('hey-yoo-utils/pathExtra');
 
-fsExtra.remove('xxx/yyy/zzz');
+remove('xxx/yyy/zzz');
 ```
 
 ### removeExtname
@@ -93,11 +93,11 @@ fsExtra.remove('xxx/yyy/zzz');
 Remove the path extname if it had.
 
 ```javascript
-const { pathExtra } = require('hey-yoo-utils');
+const { removeExtname } = require('hey-yoo-utils/pathExtra');
 
-pathExtra.removeExtname('index.js');
+removeExtname('index.js');
 // return index
 
-pathExtra.removeExtname('xxx/yyy/index.js');
+removeExtname('xxx/yyy/index.js');
 // return xxx/yyy/index
 ```
