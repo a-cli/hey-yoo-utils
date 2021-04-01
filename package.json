@@ -1,8 +1,8 @@
 {
   "name": "hey-yoo-utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A JavaScript utility library.",
-  "main": "src/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hey-yoo/hey-yoo-utils.git"
