@@ -14,9 +14,17 @@ yarn-error.log*
 
 # Dependencies
 /node_modules
-/dist
-/lib
 
-# env
-.env.local
-.env.*.local
+# source
+/src
+.babelrc
+.editorconfig
+.eslintrc
+.gitattributes
+.gitignore
+.huskyrc
+.lintstagedrc
+.prettierrc
+pnpm-lock.yaml
+rollup.config.js
+tsconfig.json
