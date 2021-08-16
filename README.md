@@ -4,17 +4,30 @@ A JavaScript utility library.
 
 ## Installation
 
-```bash
-npm install hey-yoo-utils
+pnpm
+
+```shell
+pnpm add hey-yoo-utils
+```
+
+npm
+
+```shell
+npm i hey-yoo-utils
+```
+
+yarn
+
+```shell
+yarn add hey-yoo-utils
 ```
 
 ## Usage
 
 - All utils
-  - common
-    - [parseArgs](#parseArgs)
-    - [runFunc](#runFunc)
-    - [typeOf](#typeOf)
+  - [parseArgs](#parseArgs)
+  - [runFunc](#runFunc)
+  - [typeOf](#typeOf)
   - fsExtra
     - [ensureDir](#ensureDir)
     - [remove](#remove)
@@ -26,9 +39,17 @@ npm install hey-yoo-utils
 Parse process argv to object:
 
 ```javascript
-const { parseArgs } = require('hey-yoo-utils/common');
+const { parseArgs } = require('hey-yoo-utils');
 
-const args = parseArgs(['debug', 'text=string', 'num=123', 'visible=true', 'disabled=false', 'val=null', 'id=undefined']);
+const args = parseArgs([
+  'debug',
+  'text=string',
+  'num=123',
+  'visible=true',
+  'disabled=false',
+  'val=null',
+  'id=undefined',
+]);
 
 console.log(args);
 /*
@@ -49,7 +70,7 @@ console.log(args);
 Run the function and pass parameters to it.
 
 ```javascript
-const { runFunc } = require('hey-yoo-utils/common');
+const { runFunc } = require('hey-yoo-utils');
 
 runFunc(() => {}, 'params1', 'params2');
 
@@ -62,7 +83,7 @@ runFunc(undefined, 'params1', 'params2');
 Get object type.
 
 ```javascript
-const { typeOf } = require('hey-yoo-utils/common');
+const { typeOf } = require('hey-yoo-utils');
 
 typeOf('foo bar');
 // return 'string
@@ -73,9 +94,9 @@ typeOf('foo bar');
 Ensure the directory exists, it will create directory if isn't exist.
 
 ```javascript
-const { ensureDir } = require('hey-yoo-utils/fsExtra');
+const { fsExtra } = require('hey-yoo-utils');
 
-ensureDir('xxx/yyy/zzz');
+fsExtra.ensureDir('xxx/yyy/zzz');
 ```
 
 ### remove
@@ -83,9 +104,9 @@ ensureDir('xxx/yyy/zzz');
 Delete directory or file.
 
 ```javascript
-const { remove } = require('hey-yoo-utils/pathExtra');
+const { fsExtra } = require('hey-yoo-utils/fsExtra');
 
-remove('xxx/yyy/zzz');
+fsExtra.remove('xxx/yyy/zzz');
 ```
 
 ### removeExtname
@@ -93,11 +114,11 @@ remove('xxx/yyy/zzz');
 Remove the path extname if it had.
 
 ```javascript
-const { removeExtname } = require('hey-yoo-utils/pathExtra');
+const { pathExtra } = require('hey-yoo-utils');
 
-removeExtname('index.js');
+pathExtra.removeExtname('index.js');
 // return index
 
-removeExtname('xxx/yyy/index.js');
+pathExtra.removeExtname('xxx/yyy/index.js');
 // return xxx/yyy/index
 ```
