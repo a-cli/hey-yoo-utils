@@ -1,10 +1,10 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-function remove(tagPath) {
+function remove(tagPath: string): void {
   if (fs.existsSync(tagPath)) {
     const stats = fs.statSync(tagPath);
-    if (stats.isFile(tagPath)) {
+    if (stats.isFile()) {
       fs.unlinkSync(tagPath);
     } else if (stats.isDirectory()) {
       const fileList = fs.readdirSync(tagPath);
@@ -19,4 +19,4 @@ function remove(tagPath) {
   }
 }
 
-module.exports = remove;
+export default remove;
