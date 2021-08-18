@@ -13,7 +13,7 @@ module.exports = {
   output: {
     format: 'esm',
     name: pkg.name,
-    file: resolve(pkg.module),
+    file: resolve(pkg.exports),
   },
   external: [],
   plugins: [

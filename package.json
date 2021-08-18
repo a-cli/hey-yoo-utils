@@ -2,8 +2,8 @@
   "name": "hey-yoo-utils",
   "version": "1.0.0",
   "description": "A JavaScript utility library.",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "type": "module",
+  "exports": "./lib/index.js",
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
