@@ -9,6 +9,7 @@
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "scripts": {
+    "watch": "npx rollup -c --watch",
     "build": "npx rollup -c",
     "lint-staged": "lint-staged",
     "preinstall": "npx only-allow pnpm",
