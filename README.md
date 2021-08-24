@@ -30,8 +30,11 @@ yarn add hey-yoo-utils
   - [typeOf](#typeOf)
   - fsExtra
     - [ensureDir](#ensureDir)
+    - [readFile](#readFile)
+    - [readJson](#readJson)
     - [remove](#remove)
   - pathExtra
+    - [getGlobalPath](#getGlobalPath)
     - [removeExtname](#removeExtname)
 
 ### parseArgs
@@ -39,7 +42,7 @@ yarn add hey-yoo-utils
 Parse process argv to object:
 
 ```javascript
-const { parseArgs } = require('hey-yoo-utils');
+import { parseArgs } from 'hey-yoo-utils';
 
 const args = parseArgs([
   'debug',
@@ -70,7 +73,7 @@ console.log(args);
 Run the function and pass parameters to it.
 
 ```javascript
-const { runFunc } = require('hey-yoo-utils');
+import { runFunc } from 'hey-yoo-utils';
 
 runFunc(() => {}, 'params1', 'params2');
 
@@ -83,7 +86,7 @@ runFunc(undefined, 'params1', 'params2');
 Get object type.
 
 ```javascript
-const { typeOf } = require('hey-yoo-utils');
+import { typeOf } from 'hey-yoo-utils';
 
 typeOf('foo bar');
 // return 'string
@@ -94,9 +97,29 @@ typeOf('foo bar');
 Ensure the directory exists, it will create directory if isn't exist.
 
 ```javascript
-const { fsExtra } = require('hey-yoo-utils');
+import { fsExtra } from 'hey-yoo-utils';
 
 fsExtra.ensureDir('xxx/yyy/zzz');
+```
+
+### readFile
+
+read JSON file and return file string.
+
+```javascript
+import { fsExtra } from 'hey-yoo-utils';
+
+const file = fsExtra.readFile('package.json');
+```
+
+### readJson
+
+read JSON file and return JSON Object.
+
+```javascript
+import { fsExtra } from 'hey-yoo-utils';
+
+const pkg = fsExtra.readJson('package.json');
 ```
 
 ### remove
@@ -104,9 +127,19 @@ fsExtra.ensureDir('xxx/yyy/zzz');
 Delete directory or file.
 
 ```javascript
-const { fsExtra } = require('hey-yoo-utils/fsExtra');
+import { fsExtra } from 'hey-yoo-utils';
 
 fsExtra.remove('xxx/yyy/zzz');
+```
+
+### getGlobalPath
+
+get __filename and __dirname values.
+
+```javascript
+import { pathExtra } from 'hey-yoo-utils';
+
+const { __filename, __dirname } = pathExtra.getGlobalPath(import.meta.url);
 ```
 
 ### removeExtname
@@ -114,7 +147,7 @@ fsExtra.remove('xxx/yyy/zzz');
 Remove the path extname if it had.
 
 ```javascript
-const { pathExtra } = require('hey-yoo-utils');
+import { pathExtra } from 'hey-yoo-utils';
 
 pathExtra.removeExtname('index.js');
 // return index
