@@ -1,6 +1,6 @@
-const fs = require('fs');
+import fs from 'fs';
 
-function ensureDir(path) {
+function ensureDir(path: string): void {
   if (fs.existsSync(path)) {
     const stat = fs.statSync(path);
     if (stat.isDirectory()) {
@@ -10,4 +10,4 @@ function ensureDir(path) {
   fs.mkdirSync(path);
 }
 
-module.exports = ensureDir;
+export default ensureDir;

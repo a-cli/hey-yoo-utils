@@ -1,8 +1,4 @@
-/**
- * @param {Array} args
- * @return {Object} result
- * */
-function parseArgs(args) {
+function parseArgs(args: string[]): { [key: string]: any } {
   if (Array.isArray(args)) {
     let result = {};
     for (let i = 0; i < args.length; i++) {
@@ -36,4 +32,4 @@ function parseArgs(args) {
   return {};
 }
 
-module.exports = parseArgs;
+export default parseArgs;
