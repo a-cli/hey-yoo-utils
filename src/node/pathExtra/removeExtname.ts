@@ -1,4 +1,4 @@
-const path = require('path');
+import path from 'path';
 
 export default function removeExtname(argPath: string): string {
   let extname = path.extname(argPath);
